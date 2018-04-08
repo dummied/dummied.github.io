@@ -1,0 +1,7 @@
+---
+layout: post
+title: "(no title)"
+date: '2012-08-23 16:22:34'
+---
+
+Think I might have the kinks worked out now. Still undecided about the buffer pipeline bit, though.

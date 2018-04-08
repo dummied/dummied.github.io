@@ -1,0 +1,19 @@
+---
+layout: post
+title: What comes next
+date: '2012-11-07 17:23:49'
+---
+
+<p>At a macro level, I personally gratified with much of the election results last night. The Affordable Care Act will be able to be fully enacted and Indiana doesn't have the ignominy of having a laughingstock for a Senator.</p>
+<p>However, one thing I've realized between <a href="http://blog.chrisvannoy.com/2012/11/why-i-voted/">yesterday's post</a> and today is that the macro level really doesn't affect the things I care most about - early childhood education and the retention of the state Autism mandate - all that much (especially now that macro level health care reform is locked in for a while). Presidential and Senate races are big deals, but to affect the change I want to see and protect the things I feel strongly need protection, I need to look smaller and more local.</p>
+<p>After last night, we have a Tea Party favorite and social conservative for a governor. We also have down ballot races in my district (largely the Indy suburbs with a bit of Marion County proper) still too close to call, despite featuring a pair of Republican candidates that should be so far out of the mainstream to have had a shot.</p>
+<p>These are the races that should matter to me much more than turning Indiana blue at a macro level. It's also smaller races where a ground game and proper organization can make a much bigger difference (something the right wing discovered/realized long ago).</p>
+<p>In my younger days, I was much more political. I led the West Virginia University Young Democrats for a while and volunteered on the 1996 Clinton reelection campaign, including a stint helping with an inaugural ball after that successful election.</p>
+<p>In the years since, I've largely drifted away. Life got in the way to a degree and until Obama, I saw very little appeal in Democratic candidates. In general, though, I didn't see a lot of things worth fighting for, or grew complacent thinking that things wouldn't change much no matter the party involved.</p>
+<p>At this point, though, I have things I want to fight for. I want to fight for the right of every child diagnosed with Autism to get the same level of care that our son Benjamin has had. I also want to fight to improve an early childhood eduction system in this state that appalls me (no fully-funded K, no preschool infrastructure at all, <a href="http://www.childrensdefense.org/child-research-data-publications/data/state-data-repository/full-day-k/2012-indiana-full-day-k-factsheet.pdf">more here</a>).</p>
+<p>As I mentioned yesterday, I feel one party gives me the best chance for those two goals. But the Indiana Democratic Party infrastructure (admittedly from the outside), seems poorly run and running scared. When it takes a monumental gaffe to keep someone like Richard Mourdock from winning a Senate seat, there's something wrong. When someone like <a href="http://www.indystar.com/article/20121006/NEWS08/210060326/Matthew-Tully-Indy-area-Dist-30-Senate-race-shaping-up-sharply-drawn-battle">Scott Schneider</a> is leading (likely to win, but likely headed to a recount of some sort) a purple, moderate district, something is wrong. When the <a href="http://indems.org/">organization's website</a> falls silent during an election, something is wrong.</p>
+<p>I'd like to make it better, but I don't know where to start.</p>
+<p>So, here's where I'm asking for your help: How can I get involved, either with the Indiana Democratic Party (at a tech level), or with an Autism/Early Childhood Education advocacy group of some sort?</p>
+<p>I've been searching around for any of those and keep coming up empty.</p>
+<p>Point me in the right direction.</p>
+<p> </p>

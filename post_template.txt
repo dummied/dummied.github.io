@@ -1,0 +1,20 @@
+---
+layout: post
+title: <%= title %>
+date: 
+type: post
+published: false
+status: draft
+categories: []
+tags: []
+meta:
+  image: ''
+  _publicize_twitter_user: "@chris_vannoy"
+author:
+  login: chris_vannoy
+  email: chris@chrisvannoy.com
+  display_name: Chris Vannoy
+  first_name: Chris
+  last_name: Vannoy
+---
+

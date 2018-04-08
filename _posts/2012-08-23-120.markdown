@@ -1,0 +1,7 @@
+---
+layout: post
+title: "(no title)"
+date: '2012-08-23 21:17:44'
+---
+
+Trying http://ifttt.com/ as the pipeline between the blog statuses and Twitter.

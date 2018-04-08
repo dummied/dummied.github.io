@@ -1,0 +1,7 @@
+---
+layout: post
+title: "(no title)"
+date: '2012-08-23 22:44:09'
+---
+
+I suspect I'm going to have to write my own Twitter-posting mechanism. Because with short posts, I don't need or want the link included.

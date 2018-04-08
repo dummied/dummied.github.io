@@ -1,0 +1,15 @@
+---
+layout: post
+title: "(no title)"
+date: '2012-08-23 16:44:00'
+---
+
+It's actually a bit weird right now (using buffer) in that I'm posting things that would go live immediately via Twitter, but here, I know they're not going live for hours.
+
+The good thing, however, is that I can now make statuses as long as I'd like.
+
+For instance, some of the other weirdness: It simply takes too long to post. I have to select the tumblelog type ("statuses"), a category (might ditch that one eventually), maybe tags and then set a slug for the permalink (since title-less posts and WP permalinks don't seem to get along very well by default).
+
+I might have to either find or make something that lets me do this more quickly.
+
+And I might need to ditch the Buffer pipe. It's not quite doing what I'd like it to do and the time-shifting is very weird.

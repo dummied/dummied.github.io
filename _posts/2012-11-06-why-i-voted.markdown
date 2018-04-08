@@ -1,0 +1,31 @@
+---
+layout: post
+title: Why I voted
+date: '2012-11-06 14:46:04'
+---
+
+<p>As I've mentioned before, my son, Benjamin, was diagnosed with Autism a bit more than a year ago. Since August of last year, he's been in intense ABA therapy: five days a week, 8:30-4:30 every day of every week (minus vacation and holidays).</p>
+<p>The amount of progress we've seen in that year is nothing short of remarkable:</p>
+<p>A year ago, he made one sound (a kind of monotonic "ehhhhh") and had one word: "pop". He had three signs (none of them correctly done): "help", "more" and "all done". Today, he sings(!), he talks (with an unreal vocabulary, actually) and he can actually kind of hold a conversation unless he gets distracted and interested in something else.</p>
+<p>A year ago, I could walk into the same room as Benjamin, say his name as many times as I'd like and get no recognition. Today, he occasionally comes to greet me at the door when I come home. I still have to try very hard to get his attention sometimes, but it's much improved.</p>
+<p>A year ago, I couldn't imagine what his life would be like. Today, he's well on track for full mainstreaming: regular school with regular kids and all the rest. We're not there yet, but he's getting closer every day. He'll always be a bit … eccentric … but close enough to normal that with the right environment he might not have too tough of a time of it.</p>
+<p>I can see that for him now. I can see his whole life laid out in front of him and I don't see it as that much different than anyone else's.</p>
+<p>He can be anything he wants to be, and I'm tearing up just thinking about how far he's come and how much further he can go now.</p>
+<p>And we owe it *all* to getting him this therapy this early and quickly after diagnosis. It's most effective before age three, when brains are still malleable and growing.</p>
+<p>As I mentioned above, this therapy is intensive and consuming to a degree. We call it "school," but it's really a clinical therapy with highly-skilled and trained practitioners.</p>
+<p>And it's outrageously expensive.</p>
+<p>Think about it: 40 hours of therapy every week for an entire year. Whatever deductible of whatever insurance plan we ever have will be blown through within the first week. We know that going in and plan for it accordingly. We have HSA's and money set aside to cover all of that.</p>
+<p>But I shudder to think what it would be like if we had to pay for that out-of-pocket. We simply couldn't do it. A year's worth of his therapy is likely more than my entire salary.</p>
+<p>We've been somewhat lucky in that Indiana has one of the best insurance mandates for Autism in the country. They can place no caps on the coverage (most states do) and are required to cover procedures such as ABA.</p>
+<p>The catch is that only a certain subset of insurance plans &amp;mdash; group plans &amp;mdash; fall under this requirement. Approximately 80% of insurance plans in Indiana don't fall under this mandate. My plan at my last employer, Angie's List, was exempt from the mandate, for instance. We were lucky again that AL adjusted their plan rules to cover Benjamin's therapy. And I can never thank them enough for that.</p>
+<p>But I still live in a world where I have to be highly cognizant of the insurance landscape. Any shift in deducible means I need to set aside more. Any shift in plan makeup means I might have to explore other options or fight tooth-and-nail to ensure coverage.</p>
+<p>And, until recently, any potential job move meant some of the first qualifying questions I had to ask was: Is this covered? And what is the pre-existing condition policy?</p>
+<p>I've turned down jobs based on the answers to those questions.</p>
+<p>Because, no matter what happens, Benjamin gets this therapy. It ranks right beneath breathing on my priority list. And Ben will have to fight against this for his entire life. He was born with a pre-existing condition, though a much more mild one than some of the other kids we see at his center.</p>
+<p>And the new world ushered in by the Affordable Care Act means he need not worry about the pre-existing condition part ever again. Thanks to that, I know he can always find health care coverage, and that it's theoretically more affordable than otherwise.</p>
+<p>The mandate is the other tricky thing that influences my vote these days. It's a quintessential government regulation: The government mandates that group insurance plans issued in the state of Indiana cover this therapy: with no caps, preconditions or restrictions. If you have a diagnosis, and a doctor refers you, it's covered.</p>
+<p>With a more hard-line anti-regulation bent growing in the Republican Party, I couldn't in good conscience vote for any of them. This is the sort of government regulation that can (and will) be fought by huge sums of money and armies of lobbyists. It's expensive, and insurance companies don't like it (trust me: I've talked to enough of them). And when I think about all the good that's come to Benjamin that's come from it, I feel it's vital that this mandate remain in place &amp;mdash; or even be expanded. </p>
+<p>It's not just for Benjamin, but for all the other kids who can be helped by this. Benjamin's making such great progress that the mandate likely (hopefully) won't apply to him much longer, but there are other kids out there that could greatly benefit from it and I want to ensure, as much as one voter can, that the same opportunity is available to all of them.</p>
+<p>There are other issues on my mind when I walked into the voting booth: Ensuring the separation of church and state, improving the dreadful state of early childhood eduction in this state and the like, but really, that's what things came down to when I entered the voting booth:</p>
+<p>Ensuring, as much as one voter can, that kids like my son Benjamin can get the care they need and need never worry about the hassles of health insurance I've had to deal with.</p>
+<p>I thought of him, and the rest was easy.</p>

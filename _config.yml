@@ -1,9 +1,9 @@
 # Site settings
-name: Travelogue
-description: 'A minimal, single-column Jekyll theme that provides an immersive read experience for your readers'
+name: 'The Hallway'
+description: "Chris Vannoy's thoughts on code, analytics, careers, pop culture and raising kids on the Autism Spectrum."
 
 baseurl: '' # the subpath of your site, e.g. /blog
-url: 'http://yourdomain.com' # the base hostname & protocol for your site
+url: 'http://blog.chrisvannoy.com' # the base hostname & protocol for your site
 
 # Build settings
 markdown:            kramdown
@@ -14,10 +14,12 @@ pagination:          true
 paginate:            8
 paginate_path:       page/:num/
 
+array: []
+
 author:
-    name: 'Salvatore Gentile'
-    email: ''
-    uri: 'https://github.com/SalGnt'
+    name: 'Chris Vannoy'
+    email: 'chris@chrisvannoy.com'
+    uri: 'https://github.com/dummied'
 
 sass:
     sass_dir: _sass
@@ -29,14 +31,32 @@ defaults:
         path: '_posts'
         type: 'posts'
       values:
-        reading_time: true
+        reading_time: false
         # Meta
         show_tags: true
-        show_categories: true
+        show_categories: false
         # Social
         share_buttons: true
-        disqus: true
+        disqus: false
+        type: 'post'
+        status: 'draft'
+        categories: []
+        tags: []
+        meta:
+          image: ''
+          _publicize_twitter_user: "@chris_vannoy"
+        author:
+          login: "chris_vannoy"
+          email: "chris@chrisvannoy.com"
+          display_name: "Chris Vannoy"
+          first_name: "Chris"
+          last_name: "Vannoy"
+
 
 gems:
     - jekyll-feed
     - jekyll-sitemap
+
+tag_page_layout: tag
+tag_page_dir: tag
+tag_permalink_style: pretty

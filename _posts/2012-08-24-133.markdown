@@ -1,0 +1,11 @@
+---
+layout: post
+title: "(no title)"
+date: '2012-08-24 03:08:01'
+---
+
+@bfritz Huh. Hadn't thought of that. I use it to catch favs and links I tweet currently. 
+
+Still think I prefer to hold the original, though. I trust @pinboard, but at the end of the day, it's still somebody else's server. 
+
+<a href="https://twitter.com/bfritz/statuses/238825713363468288">In Reply To</a>

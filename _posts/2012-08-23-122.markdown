@@ -1,0 +1,7 @@
+---
+layout: post
+title: "(no title)"
+date: '2012-08-23 21:20:36'
+---
+
+That seemed to work pretty damn well. Of course, I triggered it manually ... and I wonder what it will do with too-long-for-Twitter status like this one.

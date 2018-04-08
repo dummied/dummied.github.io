@@ -1,0 +1,9 @@
+---
+layout: post
+title: "(no title)"
+date: '2012-08-23 20:01:33'
+---
+
+One thing I'll need to figure out is how to handle replies. I think routing them to the right person should be as simple as including the @username idiom, but it'll lose any place in the reply stream.
+
+My thought right now is I'll need to add a "In Reply To" bug in the body itself.

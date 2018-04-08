@@ -1,0 +1,7 @@
+---
+layout: post
+title: "(no title)"
+date: '2012-08-23 17:36:53'
+---
+
+Another fun thing is that Wordpress keeps wanting to randomly add titles to these titleless posts. Usually "Next Post" or "Previous Post".
