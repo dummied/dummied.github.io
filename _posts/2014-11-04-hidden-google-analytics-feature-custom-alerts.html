@@ -1,0 +1,61 @@
+---
+layout: post
+title: 'Hidden Google Analytics feature: Custom alerts'
+date: 2014-11-04 14:47:45.000000000 -05:00
+type: post
+published: true
+status: publish
+categories:
+- Analytics
+- Tuesday Tips
+tags:
+- custom alerts
+- google analytics
+- tips &amp; tricks
+meta:
+  _wpcom_is_markdown: '1'
+  _wpas_done_all: '1'
+  _publicize_twitter_user: "@chris_vannoy"
+  _edit_last: '1'
+  image: ''
+  _wpas_skip_9013372: '1'
+  _wpas_skip_9017901: '1'
+  _wpas_skip_9013380: '1'
+  _wpas_skip_9013384: '1'
+  _yoast_wpseo_title: Putting Google Analytics' Custom Alerts to work
+thumb: http://jekyll-blog-cv.s3.amazonaws.com/product-icon.png
+---
+<p><em>Note: This post originally appeared on the blog of my since-shuttered analytics firm: Axiomatic. That said, if you need some analytics work, <a href="mailto:chris@chrisvannoy.com">get in touch</a></em></p>
+<p>In an ideal world, your website analytics should serve as a watchdog over your business - giving you insight on what's working and what isn't.</p>
+<p>But over the past few weeks I've talked to enough people to know that most frankly don't have the time to log in to their analytics every day (or even once a week) to check on things.</p>
+<p>But here's the thing: Google Analytics can <em>come to you</em> when things get out of whack.</p>
+<h3>Intelligence Events and Custom Alerts</h3>
+<p>Right above "Real-Time" in the left sidebar navigation of GA is likely the least-used feature of the product: Intelligence Events.</p>
+<p><img src="http://jekyll-blog-cv.s3.amazonaws.com/Screen%20Shot%202014-10-30%20at%2011.14.20%20AM.png" alt="" /></p>
+<p>Why is it so infrequently used? Well, just look at it. Between the intimidating name and the completely blank state it lands you in, it's a wonder anyone digs into this it all.</p>
+<p>But the second tab there - Custom Alerts - is a hugely powerful interface to let you know when things happen on your site that you'd really like to know about.</p>
+<p>With these custom alerts, you can do things like:</p>
+<ul>
+<li>Email you when traffic is significantly down or up over the previous day.</li>
+<li>Send you a text message when your site errors spike.</li>
+<li>Notify the entire company when you're on a sales roll.</li>
+<li>Email you when that guest post went live and started driving traffic to your site.</li>
+<li>Send you a text message when your advertising campaign went live.</li>
+</ul>
+<h3>Setting one up</h3>
+<p>Last week, I outlined a <a href="/tracking-website-errors-google-analytics/">recommendation on tracking error pages in Google Analytics</a>.</p>
+<p>So, now that we're tracking them, it'd be awfully handy if GA gave a ping when those numbers became elevated.</p>
+<p>Let's set one up for a spike in 404 errors:</p>
+<ol>
+<li>In the "Admin Area," click on "Custom Alerts." It can be found near the bottom of the right-most column. You can also get to it from the Custom Events tab of the aforementioned Intelligence Events area.</li>
+<li>This page lists and allows you to manage any existing custom alerts. In this case, click "+ NEW ALERT" to create our new one. You should see an interface like the below:<br />
+<img src="http://jekyll-blog-cv.s3.amazonaws.com/Screen%20Shot%202014-10-24%20at%202.26.59%20PM.png" alt="" /></li>
+<li>Give your alert a name ('404s', perhaps) and optionally set up email and/or SMS notifications. Note: You can add multiple, arbitrary email addresses to the notification list.</li>
+<li>For this one in particular, we're just after the "404" event action, so first off, we'll limit it to just those actions in the green menu. Event Action -> Exactly Matches -> 404<br />
+<img src="http://jekyll-blog-cv.s3.amazonaws.com/Screen%20Shot%202014-10-30%20at%2011.40.39%20AM.png" alt="" /></li>
+<li>So, now we have Google Analytics keeping an eye on that and just need them to tell us when it sees a spike. In the blue menu, something like Total Events -> % increases by more than -> 10% -> Same Day in the previous week should do the trick.<br />
+<img src="http://jekyll-blog-cv.s3.amazonaws.com/Screen%20Shot%202014-10-30%20at%2011.43.10%20AM.png" alt="" /></li>
+</ol>
+<p>And here's the final product:</p>
+<p><img src="http://jekyll-blog-cv.s3.amazonaws.com/Screen%20Shot%202014-10-30%20at%2011.44.50%20AM.png" alt="" /></p>
+<p>Save that alert and rest easy knowing that GA will give you a hearty ping when those errors spike.</p>

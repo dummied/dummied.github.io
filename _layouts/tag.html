@@ -1,0 +1,27 @@
+---
+layout: default
+home: true
+---
+
+<div class="home">
+    <h2>{{ page.tag }}</h2>
+    <ul class="post-list">
+
+        {% for post in page.posts %}
+        <li>
+            <a href="{{ post.url | prepend: site.baseurl }}" class="post-list-link">
+                <div class="post-list-info">
+                    <h2 class="post-list-title">{{ post.title }}</h2>
+                    <span class="post-list-meta">{{ post.date | date: "%B %-d, %Y" }}</span>
+                </div>
+            </a>
+            {% if post.thumb %}
+              <img src="{{ post.thumb }}" class="post-list-thumb" />
+            {% else %}
+              <img src="http://jekyll-blog-cv.s3.amazonaws.com/Notebooks.jpg" class="post-list-thumb" />
+            {% endif %}
+        </li>
+        {% endfor %}
+    </ul>
+
+</div>

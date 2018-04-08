@@ -1,0 +1,87 @@
+---
+layout: post
+title: Tracking direct file uploads in Google Analytics
+date: 2014-10-21 14:11:34.000000000 -04:00
+type: post
+published: true
+status: publish
+categories:
+- Analytics
+- Tuesday Tips
+tags:
+- backend analytics
+- file downloads
+- google analytics
+- tuesday tip
+meta:
+  _wpcom_is_markdown: '1'
+  _publicize_twitter_user: "@chris_vannoy"
+  _edit_last: '1'
+  image: ''
+  _thumbnail_id: '69'
+  _wpas_done_all: '1'
+  _wpas_mess: Tracking direct file uploads in Google Analytics http://wp.me/p5eaMq-15
+  _wpas_skip_9013372: '1'
+  _wpas_skip_9017901: '1'
+excerpt: Say your website has files available to download. What if downloaders don't
+  come through your website at all? How do you track those so you can know what's
+  eating up your bandwidth without slogging through server logs to find the culprit?
+thumb: http://jekyll-blog-cv.s3.amazonaws.com/product-icon.png
+---
+<p><em>Note: This post originally appeared on the blog of my since-shuttered analytics firm: Axiomatic. That said, if you need some analytics work, <a href="mailto:chris@chrisvannoy.com">get in touch</a></em></p>
+<p><strong>WARNING:</strong> This entry's going to get a good bit nerdy. Useful, but nerdy.</p>
+<p>Say your website has files available to download. If they come through your website to download, there are fairly easy ways to track those downloads in <a href="http://www.google.com/analytics">Google Analytics</a><sup id="fnref-67-in_ga"><a href="#fn-67-in_ga" rel="footnote">1</a></sup>.</p>
+<p>But what if downloaders don't come through your website at all? What if links to the file get posted on message boards, or downloaded via <a href="http://curl.haxx.se/">cURL</a>. How do you track those so you can know what's eating up your bandwidth - or how widespread your notoriety might actually be - without slogging through server logs to find the culprit?</p>
+<p>The first thing you need to realize is that Google Analytics is really just a series of GET requests. Seriously, open up your Developer Tools' network tab (Chrome's is below) and watch the traffic. You should see something like the below<sup id="fnref-67-this_one"><a href="#fn-67-this_one" rel="footnote">2</a></sup>:</p>
+<p><img style="display: block; margin-left: auto; margin-right: auto;" title="ga_dev_tools.png" src="{{ site.baseurl }}/assets/ga_dev_tools.png" alt="Ga dev tools" width="600" height="111" border="0" /></p>
+<p>Of note, I'm using the newer <a href="https://support.google.com/analytics/answer/2790010?hl=en">Universal Analytics</a>. I you're on the older analytics infrastructure, this <em>should</em> also work for you, but I make no guarantees.</p>
+<p>If you explore a bit further, you'll see what GA is doing under the hood is a fairly simple <code>GET</code> request to the following URL:</p>
+<pre><code>http://www.google-analytics.com/collect?v=1&amp;amp;_v=j30&amp;amp;a=1159117084&amp;amp;t=event&amp;amp;_s=2&amp;amp;dl=http%3A%2F%2Faxiomaticllc.com%2Fanalytics-arent-just-marketing-efforts%2F&amp;amp;ul=en-us&amp;amp;de=UTF-8&amp;amp;dt=Analytics%20aren%27t%20just%20for%20your%20marketing%20efforts%20-%20Axiomatic%2C%20LLC&amp;amp;sd=24-bit&amp;amp;sr=1920x1080&amp;amp;vp=1425x150&amp;amp;je=1&amp;amp;fl=15.0%20r0&amp;amp;ec=outbound&amp;amp;ea=click&amp;amp;el=newsletter&amp;amp;_utma=132835678.1925474883.1413335789.1413742523.1413742523.1&amp;amp;_utmz=132835678.1413742523.1.1.utmcsr%3D(direct)%7Cutmccn%3D(direct)%7Cutmcmd%3D(none)&amp;amp;_utmht=1413900487117&amp;amp;_u=OACCAEQEI~&amp;amp;jid=&amp;amp;cid=1925474883.1413335789&amp;amp;tid=UA-55900826-1&amp;amp;z=1806269715
+</code></pre>
+<p>That's what GA requests by default, but we can pare that down to the bare essentials with a URL like this:</p>
+<pre><code>http://www.google-analytics.com/collect?v=1&amp;amp;t=event&amp;amp;ec=testing&amp;amp;ea=download&amp;amp;cid=35009a79-1a05-49d7-b876-2b884d0f825b&amp;amp;tid=UA-55900826-1&amp;amp;el=direct
+</code></pre>
+<p>That URL represent only the bare minimum needed to trigger GA event tracking and can be done through either a <code>GET</code> or <code>POST</code> request.</p>
+<p>The required attributes:</p>
+<ul>
+<li><strong><a href="https://developers.google.com/analytics/devguides/collection/protocol/v1/parameters#v">v</a>:</strong> The version of GA API. Right now, that value should always be "1"</li>
+<li><strong><a href="https://developers.google.com/analytics/devguides/collection/protocol/v1/parameters#t">t</a>:</strong> The type of tracking. In this case (and recommended for file downloads), it's an event. If you wanted to trigger a page view instead, the value would be "pageview," and that comes with <a href="https://developers.google.com/analytics/devguides/collection/protocol/v1/devguide#page">different required parameters</a>.</li>
+<li><strong><a href="https://developers.google.com/analytics/devguides/collection/protocol/v1/parameters#ec">ec</a>:</strong> Event Category.</li>
+<li><strong><a href="https://developers.google.com/analytics/devguides/collection/protocol/v1/parameters#ea">ea</a>:</strong> Event Action.</li>
+<li><strong><a href="https://developers.google.com/analytics/devguides/collection/protocol/v1/parameters#el">el</a>:</strong> Event Label.</li>
+<li><strong><a href="https://developers.google.com/analytics/devguides/collection/protocol/v1/parameters#tid">tid</a>:</strong> Your Google Analytics Tracking/Property ID.</li>
+<li><strong><a href="https://developers.google.com/analytics/devguides/collection/protocol/v1/parameters#cid">cid</a>:</strong> An anonymous Client ID. Of note: GA's <a href="https://developers.google.com/analytics/devguides/collection/protocol/v1/parameters#user">expecting a random UUID</a> for this one.</li>
+</ul>
+<p>Some optional, but recommended, parameters:</p>
+<ul>
+<li><strong><a href="https://developers.google.com/analytics/devguides/collection/protocol/v1/parameters#dr">dr</a>:</strong> Document referrer - as in, where this request came from.</li>
+<li><strong><a href="https://developers.google.com/analytics/devguides/collection/protocol/v1/parameters#uip">uip</a>:</strong> This is an IP override. Left out, GA will record the event or pageview as coming from your proxy server IP (we'll talk more about the proxy server in a moment).</li>
+<li><strong><a href="https://developers.google.com/analytics/devguides/collection/protocol/v1/parameters#ua">ua</a>:</strong> User Agent Override. This is another recommended passthrough for your proxy server to make it easier to spot abuse later.</li>
+<li><strong><a href="https://developers.google.com/analytics/devguides/collection/protocol/v1/parameters#dl">dl</a>:</strong> Document location URL. In this case, I'd recommend using the URL of the file to be downloaded.</li>
+<li><strong><a href="https://developers.google.com/analytics/devguides/collection/protocol/v1/parameters#dt">dt</a>:</strong> Document title. Also useful for determining which file was downloaded.</li>
+<li><strong><a href="https://developers.google.com/analytics/devguides/collection/protocol/v1/parameters#uid">uid</a>:</strong> The specific User ID in your application. If you have this download as part of an authenticated API, feel free to plug this in.</li>
+</ul>
+<p>So, how do we send this data to GA when a user downloads a file directly?</p>
+<p>That's where our proxy server comes in.</p>
+<p>Essentially, instead of linking directly to the files, you should link instead to an application or server that will first ping GA and then send the file - whether through a redirect or by sending the file directly.</p>
+<p>Just as an example<sup id="fnref-67-special_thanks"><a href="#fn-67-special_thanks" rel="footnote">3</a></sup>, here's how you'd do it in <a href="http://rubyonrails.org/">Rails</a><sup id="fnref-67-not_ruby"><a href="#fn-67-not_ruby" rel="footnote">4</a></sup>:</p>
+<p><script src="https://gist.github.com/dummied/d7c2badb5566eda5bc78.js"></script></p>
+<p>One side note for this technique: The same idea can be applied to other things. For example, you could fairly easily rig this same idea up to track API usage.</p>
+<p>If you implement something like the above,<a href="mailto:chris@axiomaticllc.com">let me know how it goes</a>. And if you run into trouble, <em>definitely</em> let me know.</p>
+<div class="footnotes">
+<hr />
+<ol>
+<li id="fn-67-in_ga">
+Custom events, a topic for a later series of posts, are one of two ways the <a href="https://support.google.com/analytics/answer/1136922?hl=en">GA docs</a> outline for you. But, again, that's only going to help if the downloads originated from your site directly.&#160;<a href="#fnref-67-in_ga" rev="footnote">&#8617;</a>
+</li>
+<li id="fn-67-this_one">
+This one in particular is fired on a click of the newsletter form "Submit" button in the footer of this and every page. Feel free to fill that form out to give it a whirl ...&#160;<a href="#fnref-67-this_one" rev="footnote">&#8617;</a>
+</li>
+<li id="fn-67-special_thanks">
+Special thanks to <a href="http://joel.tips/">Joel Meador</a> for a quickie (but <em>thorough</em>) code review on this example. Any mistakes contained therein are my fault, not his.&#160;<a href="#fnref-67-special_thanks" rev="footnote">&#8617;</a>
+</li>
+<li id="fn-67-not_ruby">
+This example's in Ruby/Rails because that's what I'm most familiar with. On a different platform? The procedure is probably similar. Just send this post to your dev team and have them take a crack at it. And if they give you any gruff, <a href="mailto:chris@axiomaticllc.com">let me know</a>&#160;<a href="#fnref-67-not_ruby" rev="footnote">&#8617;</a>
+</li>
+</ol>
+</div>

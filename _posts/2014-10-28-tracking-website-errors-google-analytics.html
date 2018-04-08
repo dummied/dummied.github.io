@@ -1,0 +1,105 @@
+---
+layout: post
+title: Tracking website errors in Google Analytics
+date: 2014-10-28 17:01:58.000000000 -04:00
+type: post
+published: true
+status: publish
+categories:
+- Analytics
+- Tuesday Tips
+tags:
+- errors
+- google analytics
+- tips &amp; tricks
+meta:
+  _wpcom_is_markdown: '1'
+  _publicize_twitter_user: "@chris_vannoy"
+  _edit_last: '1'
+  image: ''
+  _thumbnail_id: '69'
+  _wpas_done_all: '1'
+  _wpas_mess: 'Tuesday Tip: Tracking website errors in Google Analytics http://wp.me/p5eaMq-19'
+  _wpas_skip_9013372: '1'
+  _wpas_skip_9017901: '1'
+  _yoast_wpseo_metadesc: Why tracking your errors - 404s and 500s - in Google Analytics
+    are a good idea and best done through custom events.
+thumb: http://jekyll-blog-cv.s3.amazonaws.com/product-icon.png
+---
+<p><em>Note: This post originally appeared on the blog of my since-shuttered analytics firm: Axiomatic. That said, if you need some analytics work, <a href="mailto:chris@chrisvannoy.com">get in touch</a></em></p>
+<p>One of the things your website analytics should do the absolute best for you is letting you know when things went wrong.</p>
+<p>When your search engine referrals fall of a cliff or when your conversion rate falls, you should be able to rely on your site analytics to tell you that it happened.</p>
+<p>Today, though, let's talk about all your other errors - 404s and 500s primarily - and how best to track (and report on) with <a href="http://www.google.com/analytics/">Google Analytics</a>.</p>
+<h2>First off: Why would I track errors in GA?</h2>
+<p>If you're a developer (or friendly with your dev staff), chances are you already have error tracking for your site or apps<sup id="fnref-71-if_not"><a href="#fn-71-if_not" rel="footnote">1</a></sup>. So, why bother to track it in GA as well?</p>
+<p>First, chances are you're not going to have the marketing department traipsing through your dev error tracking system, right?</p>
+<p>Secondly, most developer error tracking services are geared more to individual issues: What went wrong and how to fix it. Tracking your errors in GA unlocks all of the other GA features - segmenting, technology, trends and the like - to tell you less about what went wrong and more about who's been affected.</p>
+<p>Also, a class of errors that's just noise to most developers - 404s - can be <em>extremely</em> useful to dig into for marketers.</p>
+<p>So, my first recommendation is to track errors, yes, in two places - your dev error tracking of choice for issue resolution and in Google Analytics for trends, impact and marketing knowhow.</p>
+<h2>What should I track?</h2>
+<p>As I mentioned up top, there are two primary classes of errors that are especially handy to track in GA: 404s and 500s. Javascript errors are also handy, but we'll save that for next week's Tuesday Tip.</p>
+<p>Let's walk through them one by one.</p>
+<h3>Tracking 404s</h3>
+<p>As I alluded to earlier, most development teams treat 404s as simply noise. In most cases, nothing's actually broken from a code standpoint and, to be honest a 404 means your system is likely doing exactly what it should.</p>
+<p>If you're a marketer, however, 404s can tell you a great deal:</p>
+<ol>
+<li>Do you have old broken links out in the wild?</li>
+<li>Did you just put the wrong link out on social media?</li>
+<li>Does Google <em>really</em> need to reindex your site?</li>
+<li>Do you have referrals out there that you'd don't even know about that need to have their URLs corrected?</li>
+</ol>
+<p>The key thing here is to not track them as a page view; you don't want errors inflating your other metrics. Each of these error classes is better tracked using <a href="https://developers.google.com/analytics/devguides/collection/analyticsjs/events">Custom Events</a>.</p>
+<p>The other important tip is to not redirect the URL to a single 404 page (ala www.yoursite.com/404.html) but rather render the 404 template and keep the URL the same. Essentially, to maximize the tracking's usefulness, we want to keep the referral, visitor and path information intact.</p>
+<p>There are of course ways to still track all that formation while redirecting to a fresh page, but it's going to be more work for you in the long run.</p>
+<p>To make this work, we're going to need to modify our tracking code a bit.</p>
+<p>The default tracking code provided by Google<sup id="fnref-71-universal"><a href="#fn-71-universal" rel="footnote">2</a></sup> looks like the below:</p>
+<pre><code>&lt;script&gt;// &lt;![CDATA[
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', &lt;YOUR_UA_ID&gt;, 'auto');
+  ga('send', 'pageview');
+
+// ]]&gt;&lt;/script&gt;
+</code></pre>
+<p>So, first off, we want to remove the page view, which is the <code>ga('send', 'pageview');</code> and replace it instead with some event tracking such as the below:</p>
+<pre><code>ga('send', 'event', 'error', '404', window.location.href)
+</code></pre>
+<p>Final full tracking code:</p>
+<pre><code>&lt;script&gt;// &lt;![CDATA[
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', &lt;YOUR_UA_ID&gt;, 'auto');
+  ga('send', 'event', 'error', '404', window.location.href)
+
+// ]]&gt;&lt;/script&gt;
+</code></pre>
+<p>The nice thing about tracking this way is that you still get all the niceties about your users, acquisition and the like while avoiding pollution of your page view data (including bounce rate).</p>
+<p>Once it's in the GA interface, you can still segment by anything you'd like in the Events reporting area (Behavior &gt; Events).</p>
+<p>One final note on the above: This change should be made <em>only</em> on the 404 page template. Leave your GA tracking code alone on all other pages.</p>
+<h3>Tracking 500s</h3>
+<p>As a quick recap: 404 errors are when a URL isn't there. The 500 class of errors<sup id="fnref-71-full_list"><a href="#fn-71-full_list" rel="footnote">3</a></sup> are when something is messed up.</p>
+<p>The procedure and technique listed for 404s largely applies here as well - as do the benefits. Again: If you can, don't redirect the page for 500s. Keep them where they are so you can pass the referral information without any extra effort.</p>
+<p>Really the only change is in the event action, changing our replacement line of code with:</p>
+<pre><code>ga('send', 'event', 'error', '500', window.location.href)
+</code></pre>
+<p>Now, GA isn't going to be able to tell you what the error was, but from a marketing perspective that's immaterial. And besides, your dev team should really be tracking 500s in a more issue-based interface. In this case, GA is handy because you can segment the errors by things like operating system - which can prove hugely helpful for things like errors that might only apply to one browser or operating system.</p>
+<div class="footnotes">
+<hr />
+<ol>
+<li id="fn-71-if_not">
+If you're not tracking errors in a dev-friendly interface, you really should be. Knowing when things are broken at the same time as end users - and ideally, before a client notices - is an all around big win. If you're on a Ruby platform, I can't recommend <a href="https://www.honeybadger.io/">HoneyBadger</a> highly enough.&#160;<a href="#fnref-71-if_not" rev="footnote">&#8617;</a>
+</li>
+<li id="fn-71-universal">
+Of note: these examples are using the <a href="https://support.google.com/analytics/answer/2790010?hl=en">universal</a> GA interface - which you should really be upgrading to if you haven't already.&#160;<a href="#fnref-71-universal" rev="footnote">&#8617;</a>
+</li>
+<li id="fn-71-full_list">
+500 errors can actually represent <a href="http://en.wikipedia.org/wiki/List_of_HTTP_status_codes#5xx_Server_Error">a wide range of issues</a>. If you're serving a range of 500 errors, breaking this tracking up by specific error code would also be highly recommended.&#160;<a href="#fnref-71-full_list" rev="footnote">&#8617;</a>
+</li>
+</ol>
+</div>

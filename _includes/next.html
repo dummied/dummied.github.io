@@ -1,0 +1,17 @@
+{% if page.next %}
+<div class="next-post">
+    <a href="{{ page.next.url | prepend: site.baseurl }}" class="next-post-link"></a>
+
+    {% if page.next.thumb %}
+      <img src="{{ page.next.thumb }}" class="next-post-thumb" />
+    {% else %}
+      <img src="http://jekyll-blog-cv.s3.amazonaws.com/Notebooks.jpg" class="next-post-thumb" />
+    {% endif %}
+
+
+    <div class="next-post-info">
+        <span class="next-story">Next Post</span>
+        <h3 class="next-post-title">{{ page.next.title }}</h3>
+    </div>
+</div>
+{% endif %}

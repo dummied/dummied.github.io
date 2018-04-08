@@ -1,0 +1,99 @@
+---
+layout: post
+title: Everything you need to know about Google Analytics' Custom Dimensions
+date: 2014-11-06 09:17:47.000000000 -05:00
+type: post
+published: true
+status: publish
+categories:
+- Analytics
+tags:
+- analytics
+- customization
+- google analytics
+- metadata
+- tips &amp; tricks
+- weekly_newsletter
+meta:
+  _wpcom_is_markdown: '1'
+  _edit_last: '1'
+  image: ''
+  _wpas_skip_9013372: '1'
+  _wpas_skip_9017901: '1'
+  _wpas_skip_9013380: '1'
+  _wpas_skip_9013384: '1'
+  _yoast_wpseo_title: Inside Google Analytics' Custom Dimensions
+  _yoast_wpseo_metadesc: In the Universal Analytics, Custom Dimensions allow you to
+    tag hits, sessions, user and the like with extra bits of data that you can use
+    later.
+  _wpas_done_all: '1'
+  _thumbnail_id: '77'
+thumb: http://jekyll-blog-cv.s3.amazonaws.com/file000143788028-1.jpg
+---
+<p><em>Note: This post originally appeared on the blog of my since-shuttered analytics firm: Axiomatic. That said, if you need some analytics work, <a href="mailto:chris@chrisvannoy.com">get in touch</a></em></p>
+<p>Hi again. Earlier, we talked about Google Analytics' <a href="/hidden-google-analytics-feature-custom-alerts/" title="Hidden Google Analytics feature: Custom alerts">Custom Alerts</a> and this week we're going to dive into another dark, dank corner of GA customization - Custom Dimensions.</p>
+<p>In the Universal Analytics, Custom Dimensions are a replacement of sorts for the older system's custom variables - they allow you to tag hits, sessions, user and the like with extra bits of data that you can then use for later segmenting and analysis.</p>
+<h2>What you can do with them</h2>
+<p>I've been digging into Custom Dimensions quite a bit lately and they've sparked some ideas like the below:</p>
+<ul>
+<li>Running a SaaS application and want to segment your marketing analytics just to visitors who aren't already customers? Set up and use a custom dimension that tags your application's existing userbase.</li>
+<li>Have different types of users who might be using your application or site differently? Set a custom dimension for their customer type and you can segment away.</li>
+<li>Want to run some retention analysis on how long users stick around and use your product? Tag them with their start week in a format such as 23-2014 (where 23 is the week of the year) and you're off to the races.</li>
+<li>Running on many different sites/platform or tracking both your main application and embeds through the same GA account? Set a dimension for that platform so you can see how the different environments affect usage.</li>
+<li>Want to know which visitors buy which editions of your ebook package? You can set a product-scoped dimension and get breakdowns of sales by product category (and then further segmented by referral source or campaign. Nifty!).</li>
+</ul>
+<p>And so forth. Essentially, any time there's some extra piece of data it'd be handy to have when analyzing your Google Analytics data, you can stick it in a Custom Dimension to have it available in the GA interface just like any other first-class dimension.</p>
+<h2>How to set them up</h2>
+<p><img src="http://jekyll-blog-cv.s3.amazonaws.com/Screen%20Shot%202014-11-06%20at%208.25.42%20AM.png" alt="" /></p>
+<p>You can manage custom dimensions from the Admin area of Google Analytics. They're listed under Custom Definitions in the Property column.</p>
+<p>The next page lists any dimensions you've already setup and includes the familiar big, red create button to make a new one.</p>
+<p><img src="http://jekyll-blog-cv.s3.amazonaws.com/Screen%20Shot%202014-11-06%20at%208.27.17%20AM.png" alt="" /></p>
+<p>Then you'll get the short form above (I've already expanded the drop-down menu for you).</p>
+<p>The name is completely arbitrary, but will show up in the GA interface menus and such. Make it something descriptive about what it is you're attempting to measure.</p>
+<p>Next comes scope and you have four options:</p>
+<ul>
+<li><strong><a href="https://developers.google.com/analytics/devguides/platform/customdimsmets#example-hit">Hit</a>:</strong> Associates that bit of data just with the ping you sent to GA. It doesn't stick around for anything else at all. But if, for instance, you have a pricing page with multiple sections and want to track where deep links might be landing using anchor tags - hit-level scope might be the way to go.</li>
+<li><strong><a href="https://developers.google.com/analytics/devguides/platform/customdimsmets#example-session">Session</a>:</strong> Tags along for all the interaction for that particular session. This is the scope I use most frequently because sessions tend to be a more-reliable metric than users/visitors (<a href="http://axiomaticllc.com/thing-visitor-metrics-good/">more info</a>). If the data is about a particular session on your site, this is the route to go.</li>
+<li><strong><a href="https://developers.google.com/analytics/devguides/platform/customdimsmets#example-user">User</a>:</strong> Will track GA's idea of who the user is (if you want more detail on how GA does that, mash the reply button) and tie the dimension to them all along the way. We just mentioned above that any analytics package's sense of "visitor" or "user" is inherently flawed, which is why I tend to avoid User. If you're in an environment where a) users are going to be on one device for your site and b) users are extremely unlikely to clear cookies, then you can rely on User-based metrics. For everyone else, those numbers can get funky - especially if you take the linked doc's advice and just tag them once when they enter the bucket.</li>
+<li><strong><a href="https://developers.google.com/analytics/devguides/platform/customdimsmets#example-product">Product</a>:</strong> This one's mostly relevant if you're doing e-commerce tracking. Essentially, it allows you to tag extra metadata to the product you're selling at time of sale.</li>
+</ul>
+<p>To recap: In almost all cases, you're going to want Hit or Session scope. Use Hit for metadata about an interaction and Session for metadata about a user.</p>
+<p>After you have the dimension set up, you need to start sending that data to Google Analytics, naturally. And after it's created, GA will provided you with some handy-dandy code samples.</p>
+<pre><code>var dimensionValue = 'SOME_DIMENSION_VALUE';
+ga('set', 'dimension1', dimensionValue);
+</code></pre>
+<p>And that's pretty much it. One quick note, though: Because custom dimension work by adding extra parameters to the tracking calls, this need to be in code before you actually trigger the analytics call. Take our standard code embed below:</p>
+<pre><code>&lt;script&gt;
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-55900826-1', 'auto');
+  ga('send', 'pageview');
+
+&lt;/script&gt;
+</code></pre>
+<p>In order for our custom dimension to fire, we'd need to nestle it right between the <code>ga('create'...);</code> and <code>ga{'send'...);</code> lines, giving us something like the below:</p>
+<pre><code>&lt;script&gt;
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-55900826-1', 'auto');
+  var dimensionValue = 'SOME_DIMENSION_VALUE';
+  ga('set', 'dimension1', dimensionValue);
+  ga('send', 'pageview');
+
+&lt;/script&gt;
+</code></pre>
+<p>If you're doing any sort of event tracking and the like, keep in mind that dimension values need to be set <em>before</em> you fire the associated tracking event.</p>
+<h2>Reporting</h2>
+<p>Once you have data flowing in, our custom dimensions are first-class reporting citizens, available anywhere you'd like to segment or report on.</p>
+<p>However, as far as I can tell, you're not going to find a report or dashboard for them in the primary navigation.</p>
+<p>Instead, you'll have them available for segmenting and reporting. Below, for instance, is the segment creation screen.</p>
+<p><img src="http://jekyll-blog-cv.s3.amazonaws.com/Screen%20Shot%202014-11-06%20at%208.59.27%20AM.png" alt="" /></p>
+<p>They're also available in the main interface as secondary dimensions.</p>
+<p><img src="http://jekyll-blog-cv.s3.amazonaws.com/Screen%20Shot%202014-11-06%20at%209.00.29%20AM.png" alt="" /></p>
+<p>All this means is that you can use your new custom dimensions just like you would any other: You can trigger custom alerts, generate custom reports, create segments using them and ultimately export them.</p>

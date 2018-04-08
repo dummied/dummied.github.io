@@ -1,0 +1,55 @@
+---
+layout: post
+title: Measuring the true conversion rate of your landing pages in Google Analytics
+date: 2014-11-19 06:35:37.000000000 -05:00
+type: post
+published: true
+status: publish
+categories:
+- Analytics
+- Tuesday Tips
+tags:
+- analytics
+- conversion_rate
+- google_analytics
+- landing_pages
+- segmenting
+meta:
+  _wpcom_is_markdown: '1'
+  _edit_last: '1'
+  image: ''
+  _publicize_twitter_user: "@chris_vannoy"
+  _yoast_wpseo_title: True landing page conversion rate in Google Analytics
+  _yoast_wpseo_metadesc: Not every conversion happens on your landing page. Here's
+    how to measure those conversions that happen elswehere.
+  _wpas_mess: Measuring the true conversion rate of your landing pages in Google Analytics
+    http://wp.me/p5eaMq-1h
+  _wpas_skip_9013372: '1'
+  _wpas_skip_9017901: '1'
+  _wpas_skip_9013380: '1'
+  _wpas_skip_9013384: '1'
+  _thumbnail_id: '81'
+  _wpas_done_all: '1'
+  enclosure: |
+    http://axiomaticllc.com/wp-content/uploads/2014/11/landing_page_screencast.mp4
+    773669
+    video/mp4
+thumb: http://jekyll-blog-cv.s3.amazonaws.com/file0001567067745.jpg
+---
+<p><em>Note: This post originally appeared on the blog of my since-shuttered analytics firm: Axiomatic. That said, if you need some analytics work, <a href="mailto:chris@chrisvannoy.com">get in touch</a></em></p>
+<p>Here's the thing: Not all of your conversions will happen on your lovingly crafted landing page.</p>
+<p>Some visitors will be intrigued enough to sign right up, but others will poke around the rest of your site and then might convert elsewhere (and might convert another way entirely).</p>
+<p>Especially when you're measuring the effectiveness of your advertising or marketing efforts, you want to ensure you're measuring the full value of those campaigns and shouldn't limit yourself to just the conversions on that landing page.</p>
+<p>Here's how to get the complete picture in Google Analytics:</p>
+<ul>
+<li><strong>Segment your visitors:</strong> I've talked about GA's segmenting before, and here we have a practical example. Set up a segment for just those visitors where the landing page of their visit is the landing page you're measuring (much like the quick screencast below).
+    <video controls=true width="473" height="260" preload="metadata" src="http://jekyll-blog-cv.s3.amazonaws.com/landing_page_screencast.mp4" style="width: 100%; height: 100%;"><source type="video/mp4" src="http://jekyll-blog-cv.s3.amazonaws.com/landing_page_screencast.mp4"><a href="http://jekyll-blog-cv.s3.amazonaws.com/landing_page_screencast.mp4">http://jekyll-blog-cv.s3.amazonaws.com/landing_page_screencast.mp4</a></video>
+</li>
+<li><strong>Then look at your conversions:</strong> When you segment in GA it essentially scopes all other views to just the visitors who match the scope. So, when you look at goals, events, content and the like, you can get a more true picture of the behavior of those visitors.</li>
+<li><strong>Compare against all visitors:</strong> If you leave the "All Sessions" segment as well, you'll get a handy comparison of how that particular landing page converts versus a regular visitor. For an extra bonus, you could (and likely should) also create a new segment that is the opposite of the one we created above - all visitors who <em>didn't</em> land on the landing page in question.</li>
+</ul>
+<p>Finally, if you have a significant number of visitors converting elsewhere on your site, try one of the following:</p>
+<ul>
+<li><strong>Add a secondary dimension:</strong> If you're on a conversion-related view, try adding a secondary dimension of "Page" to see where those conversions are actually happening on you site.</li>
+<li><strong>Behavior Flow:</strong> It's not the best interface in the world, but GA's handy "Behavior Flow" (under "Behavior" in the left sidebar navigation) feature can also let you know where your visitors meandered off to once they left your landing page.</li>
+</ul>
