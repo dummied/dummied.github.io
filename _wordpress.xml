@@ -1,0 +1,417 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:excerpt="http://wordpress.org/export/1.2/excerpt/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:wfw="http://wellformedweb.org/CommentAPI/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:wp="http://wordpress.org/export/1.2/">
+  <channel>
+    <title>The Hallway</title>
+    <link>http://www.the-hallway.net</link>
+    <pubDate>Wed, 29 Jan 2014 20:49:10 +0000</pubDate>
+    <description>A fortnightly podcast of casual conversations with off-the-radar folks in &#xD;
+technology</description>
+    <language>en-US</language>
+    <wp:wxr_version>1.2</wp:wxr_version>
+    <wp:author>
+      <wp:author_id>2093890135</wp:author_id>
+      <wp:author_login>chris@chrisvannoy.com</wp:author_login>
+      <wp:author_email>chris@chrisvannoy.com</wp:author_email>
+      <wp:author_display_name><![CDATA[Chris Vannoy]]></wp:author_display_name>
+      <wp:author_first_name><![CDATA[Chris]]></wp:author_first_name>
+      <wp:author_last_name><![CDATA[Vannoy]]></wp:author_last_name>
+    </wp:author>
+    <wp:author>
+      <wp:author_id>1302479354</wp:author_id>
+      <wp:author_login>josh@sqsp.com</wp:author_login>
+      <wp:author_email>josh@sqsp.com</wp:author_email>
+      <wp:author_display_name><![CDATA[Josh Kill]]></wp:author_display_name>
+      <wp:author_first_name><![CDATA[Josh]]></wp:author_first_name>
+      <wp:author_last_name><![CDATA[Kill]]></wp:author_last_name>
+    </wp:author>
+    <wp:category>
+      <wp:cat_name><![CDATA[Personal - Web Development]]></wp:cat_name>
+      <wp:category_nicename>Personal-WebDevelopment</wp:category_nicename>
+      <wp:category_parent />
+    </wp:category>
+    <item>
+      <link>/contact/</link>
+      <title>Contact</title>
+      <pubDate>Thu, 30 Jan 2014 16:41:05 +0000</pubDate>
+      <content:encoded><![CDATA[<p>Let me know if there's anything you like/don't like on the show. Or, even better, suggest someone I should talk to next.</p>
+
+<div class="form-wrapper">
+
+  
+
+  
+
+    <div class="form-inner-wrapper">
+
+      <form autocomplete="on" action="https://the-hallway.squarespace.com" method="POST" onsubmit="return (function(form) { Y.use
+      ('squarespace-form-submit', 'node',
+      function (Y) { (new Y.Squarespace.FormSubmit({ formNode: Y.Node(form) })).submit('52ea80d7e4b0a3bfa9aa2051', '') }); return false;})(this)">
+
+        
+
+          <div class="field-list clear">
+
+          
+
+              
+
+              
+
+              
+
+              
+
+              
+
+              
+
+              
+
+              
+
+              
+
+              
+
+              
+
+              
+
+              
+
+              
+                <fieldset id="name-yui_3_10_1_1_1391100022218_10061" class="form-item fields name required">
+                <div class="title">Name <span class="required">*</span></div>
+                <legend>Name</legend>
+                
+                  <div class="field first-name">
+                    <label class="caption"><input class="field-element field-control" name="fname"
+                    x-autocompletetype="given-name" type="text"
+                    spellcheck="false"
+                    maxlength="30"
+                    data-title="First" />
+                    First Name</label>
+                  </div>
+                  <div class="field last-name">
+                    <label class="caption"><input class="field-element field-control" name="lname"
+                    x-autocompletetype="surname" type="text"
+                    spellcheck="false" maxlength="30" data-title="Last" />
+                    Last Name</label>
+                  </div>
+                </fieldset>
+              
+
+              
+
+              
+
+              
+
+              
+
+              
+
+          
+
+              
+
+              
+
+              
+
+              
+
+              
+                <div id="email-yui_3_10_1_1_1391100022218_10376" class="form-item field email required">
+                  <label class="title" for="email-yui_3_10_1_1_1391100022218_10376-field">Email Address <span class="required">*</span></label>
+                  
+                  <input class="field-element" name="email" x-autocompletetype="email" type="text" spellcheck="false" id="email-yui_3_10_1_1_1391100022218_10376-field" />
+                </div>
+              
+
+              
+
+              
+
+              
+
+              
+
+              
+
+              
+
+              
+
+              
+
+              
+
+              
+
+              
+
+              
+
+              
+
+              
+
+          
+
+              
+
+              
+
+              
+                <div id="text-yui_3_10_1_1_1391100022218_10769" class="form-item field text required">
+                  <label class="title" for="text-yui_3_10_1_1_1391100022218_10769-field">Subject <span class="required">*</span></label>
+                  
+                  <input class="field-element text" type="text" id="text-yui_3_10_1_1_1391100022218_10769-field" />
+                </div>
+              
+
+              
+
+              
+
+              
+
+              
+
+              
+
+              
+
+              
+
+              
+
+              
+
+              
+
+              
+
+              
+
+              
+
+              
+
+              
+
+              
+
+          
+
+              
+
+              
+
+              
+
+              
+                <div id="textarea-yui_3_10_1_1_1391100022218_11162" class="form-item field textarea required">
+                  <label class="title" for="textarea-yui_3_10_1_1_1391100022218_11162-field">Message <span class="required">*</span></label>
+                  
+                  <textarea class="field-element " id="textarea-yui_3_10_1_1_1391100022218_11162-field" ></textarea>
+                </div>
+              
+
+              
+
+              
+
+              
+
+              
+
+              
+
+              
+
+              
+
+              
+
+              
+
+              
+
+              
+
+              
+
+              
+
+              
+
+              
+
+          
+
+          </div>
+
+        
+
+        
+        <div class="form-button-wrapper">
+          <input class="button sqs-system-button sqs-editable-button" type="submit" value="Submit"/>
+        </div>
+        
+
+        <div class="hidden form-submission-text">Thank you!</div>
+
+        <div class="hidden form-submission-html" data-submission-html=""></div>
+      </form>
+
+    </div>
+
+  
+
+</div>]]></content:encoded>
+      <wp:post_name>contact</wp:post_name>
+      <wp:post_type>page</wp:post_type>
+      <wp:post_id>0</wp:post_id>
+      <wp:status>publish</wp:status>
+    </item>
+    <item>
+      <link>/about/</link>
+      <title>About</title>
+      <pubDate>Fri, 08 Nov 2013 19:24:52 +0000</pubDate>
+      <content:encoded><![CDATA[&nbsp;
+  
+      <img src="http://static1.squarespace.com/static/52e96946e4b09806b1d651c6/t/52e974afe4b08236b8f0132f/1391031474972/thehallwaylogo.png?format=original" alt=""/>
+  
+
+<h2 class="text-align-center"><span style="font-size:14px; font-weight:normal; line-height:1.68em">"The Hallway" is largely a series of informal chats about work and life as a developer and/or manager of developers these days.</span></h2><p>The kind of conversation you have in office or conference hallways.</p><p>There are plenty of more-technical podcasts out there, and I don't really want to talk about libraries or text editors or anything related to the bits and bytes of being a developer.</p><p>I'm much more interested in the softer (so to speak) stuff. How'd you get to this point in your career? What's it like working remotely on a team of mostly on-site employees? What did you like most about the best job you ever had? If it's not your current job, what changed?</p><p>My own journey, career-wise, doesn't make a hell of a lot of sense (Sports Journalism to dev to management, back to dev, back to management), and I tend to find other people's stories along these lines fascinating.</p><p>But more than that, I'm less interested in what the work&nbsp;<em>is</em>&nbsp;than how it happens.</p><p>Every project and, for the purposes of this podcast, every person involved has a story.</p><p>And those stories are what ultimately interests me.</p><p>Hopefully, it interests you, too.</p><ul>
+  
+    <li><a href="/episodes/?author=52e96944e4b03bdd9164cc34"><span class="name">Chris Vannoy</span> <span class="count"><span>(</span>2<span>)</span></span></a></li>
+  
+</ul>
+&nbsp;]]></content:encoded>
+      <wp:post_name>about</wp:post_name>
+      <wp:post_type>page</wp:post_type>
+      <wp:post_id>1</wp:post_id>
+      <wp:status>publish</wp:status>
+    </item>
+    <item>
+      <title>Episode 2: Patrick Byrne</title>
+      <link>/episodes/2014/1/29/episode-2-patrick-byrne</link>
+      <content:encoded><![CDATA[<p>Yes, we're starting with Episode Two. The reason? Episode One requires a bit more editing to make up for my own screwups and I wanted to get something out the door rather than waiting.</p><p>On to show notes.</p><p>Patrick Byrne and I talk about enterprise software, Dan Cederholm fanboyism, remote work, programming as writing, dopplegangers and goofballery.</p>
+
+<h2 id="linksandstuff">Links and stuff</h2>
+
+<ul>
+<li><strong><a href="https://twitter.com/pbyrne">Patrick on Twitter</a>:</strong> Rapscallion. Husband to <a href="https://twitter.com/aca902">@aca902</a>. Developer at <a href="https://twitter.com/dribbble">@dribbble</a>.</li>
+<li><strong><a href="http://patrickbyrne.net/">patrickbyrne.net</a></strong></li>
+<li><strong><a href="http://www.linkedin.com/company/planet-discover">Planet Discover</a>:</strong> Planet Discover was formed in 2003 through a vision to provide local search for media company websites. Today, Planet Discover is a leading provider of local search, online advertising, and modular content applications, including native mobile apps, for media companies, online portals and content distributors. The company's applications and technology enable businesses to leverage their content while building profitable revenue streams and strengthening their position as the best source for local or targeted information.</li>
+<li><strong><a href="http://www.gannett.com/">Gannett</a>:</strong> Gannett is a leading media and marketing solutions company that reaches millions of people every day through our digital, mobile, broadcast and print media.</li>
+<li><strong><a href="http://indystar.com">IndyStar</a>:</strong> Indiana's largest circulation newspaper.</li>
+<li><strong><a href="http://dribbble.com/">Dribbble</a>:</strong> Dribbble is show and tell for designers.</li>
+<li><strong><a href="http://simplebits.com/">SimpleBits</a>:</strong> SimpleBits is the tiny creative studio of designer, author, and speaker, Dan Cederholm.</li>
+<li><strong><a href="http://stopdesign.com/">stopdesign</a>:</strong> Creative outlet of Douglas Bowman</li>
+<li><strong><a href="https://campfirenow.com/">Campfire</a>:</strong> Campfire is like instant messaging, but designed exclusively for groups.</li>
+<li><strong><a href="https://kato.im/">Kato</a>:</strong> Messaging for modern organizations </li>
+<li><strong><a href="http://pbs.twimg.com/media/BWPmQRoCEAASQoo.jpg">Ship shipping ships</a></strong> <img src="http://pbs.twimg.com/media/BWPmQRoCEAASQoo.jpg" alt="" title="" /></li>
+<li><strong><a href="http://en.wikipedia.org/wiki/Graphics_Interchange_Format">Graphics Interchange Format</a>:</strong> Of note, it appears Patrick and I fall on different sides of the <a href="http://bits.blogs.nytimes.com/2013/05/23/battle-over-gif-pronunciation-erupts/?_r=0">Gif-Jif debate</a></li>
+</ul>
+
+<p>The intro and outro music contains excerpts from Nine Inch Nails' <a href="http://ghosts.nin.com/main/home">"Ghosts"</a>, which is licensed under a <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/us/">Creative Commons Attribution Non-Commercial Share Alike license</a>.</p><div class="sqs-audio-embed"
+     data-url="http://static1.squarespace.com/static/52e96946e4b09806b1d651c6/52e97557e4b0cd469d34ce01/52e97a8fe4b0c14cda72c69b/1391032975655/hallway02d.mp3/original/hallway02d.mp3"
+     data-mime-type=""
+     data-title="Episode 2: Patrick Byrne"
+     data-author="Chris Vannoy"
+     data-show-download="false"
+     data-design-style="minimal"
+     data-duration-in-ms="1968000"
+     data-color-theme="dark">
+</div>]]></content:encoded>
+      <excerpt:encoded />
+      <wp:post_name>2014/1/29/episode-2-patrick-byrne</wp:post_name>
+      <wp:post_type>post</wp:post_type>
+      <wp:post_id>2</wp:post_id>
+      <wp:status>publish</wp:status>
+      <pubDate>Wed, 29 Jan 2014 22:12:23 +0000</pubDate>
+      <wp:post_date>2014-01-29 22:12:23</wp:post_date>
+      <wp:post_date_gmt>2014-01-29 22:12:23</wp:post_date_gmt>
+      <dc:creator>chris@chrisvannoy.com</dc:creator>
+      <wp:comment_status>open</wp:comment_status>
+    </item>
+    <item>
+      <wp:attachment_url>http://static1.squarespace.com/static/52e96946e4b09806b1d651c6/52e97557e4b0cd469d34ce01/52e97a8fe4b0c14cda72c69b/1391032975655/hallway02d.mp3</wp:attachment_url>
+      <link>http://static1.squarespace.com/static/52e96946e4b09806b1d651c6/52e97557e4b0cd469d34ce01/52e97a8fe4b0c14cda72c69b/1391032975655/hallway02d.mp3</link>
+      <title>attachment-52e97a8fe4b0c14cda72c69b</title>
+      <wp:post_name>hallway02d-mp3</wp:post_name>
+      <wp:post_type>attachment</wp:post_type>
+      <wp:post_id>3</wp:post_id>
+      <wp:post_parent>2</wp:post_parent>
+      <wp:status>inherit</wp:status>
+      <content:encoded><![CDATA[img-52e97a8fe4b0c14cda72c69b]]></content:encoded>
+      <excerpt:encoded><![CDATA[exc-52e97a8fe4b0c14cda72c69b]]></excerpt:encoded>
+      <pubDate>Wed, 29 Jan 2014 22:02:55 +0000</pubDate>
+      <wp:post_date>2014-01-29 22:02:55</wp:post_date>
+      <wp:post_date_gmt>2014-01-29 22:02:55</wp:post_date_gmt>
+      <dc:creator>chris@chrisvannoy.com</dc:creator>
+    </item>
+    <item>
+      <title>Episode 1: Jason Sisk</title>
+      <link>/episodes/2014/2/12/episode-1-jason-sisk</link>
+      <content:encoded><![CDATA[<p>Groupon's Jason Sisk and I talk about managing people, mixing management and development, making the shift back into pure development and using the power of code to help the world.</p>
+
+<h2 id="linksandsuch">Links and such</h2>
+
+<ul>
+<li><strong><a href="https://twitter.com/sisk">Jason on Twitter</a>:</strong> dork. music lover. family man. software guy. Gloupon. Hoosier expatriate.</li>
+<li><strong><a href="http://sisk.org/">SiskLab</a>:</strong> Jason's infrequently-updated home on the web.</li>
+<li><strong><a href="http://groupon.com">Groupon</a>:</strong> Duh.</li>
+<li><strong><a href="http://mobiwm.com/">Mobi Wireless Management</a>:</strong> The managed service vendor dedicated to helping power wireless strategies.</li>
+<li><strong><a href="http://www.bluefishwireless.net/">Bluefish Wireless Management</a>:</strong> A Mobility Management provider specializing in carrier and enterprise partnerships.</li>
+<li><strong><a href="http://en.wikipedia.org/wiki/Sisyphus">Sisyphus</a>:</strong> In Greek mythology Sisyphus was a king of Ephyra (now known as Corinth) punished for chronic deceitfulness by being compelled to roll an immense boulder up a hill, only to watch it roll back down, and to repeat this action forever.</li>
+<li><strong><a href="https://jobs.groupon.com/">Jobs at Groupon</a>:</strong> Groupon's public-facing recruiting/job listings.</li>
+<li><strong><a href="http://www.operationwalkmooresville.org/">Operation Walk: Mooresville</a>:</strong> Operation Walk is a not-for-profit volunteer medical services organization that provides free surgical treatments for patients in developing countries and in the United States.</li>
+</ul>
+
+<blockquote>
+  <p>"I can apply my professional skill to something that has a direct impact on someone's life. And that's awesome."</p>
+</blockquote><div class="sqs-audio-embed"
+     data-url="http://static1.squarespace.com/static/52e96946e4b09806b1d651c6/52e97557e4b0cd469d34ce01/52fbe339e4b04f3c7b4c1617/1392239417728/hallway01.mp3/original/hallway01.mp3"
+     data-mime-type=""
+     data-title="Episode 1: Jason Sisk"
+     data-author="Chris Vannoy"
+     data-show-download="false"
+     data-design-style="minimal"
+     data-duration-in-ms="1818000"
+     data-color-theme="dark">
+</div>]]></content:encoded>
+      <excerpt:encoded />
+      <wp:post_name>2014/2/12/episode-1-jason-sisk</wp:post_name>
+      <wp:post_type>post</wp:post_type>
+      <wp:post_id>4</wp:post_id>
+      <wp:status>publish</wp:status>
+      <pubDate>Mon, 17 Feb 2014 14:37:48 +0000</pubDate>
+      <wp:post_date>2014-02-17 14:37:48</wp:post_date>
+      <wp:post_date_gmt>2014-02-17 14:37:48</wp:post_date_gmt>
+      <dc:creator>chris@chrisvannoy.com</dc:creator>
+      <wp:comment_status>open</wp:comment_status>
+    </item>
+    <item>
+      <wp:attachment_url>http://static1.squarespace.com/static/52e96946e4b09806b1d651c6/52e97557e4b0cd469d34ce01/52fbe339e4b04f3c7b4c1617/1392239417728/hallway01.mp3</wp:attachment_url>
+      <link>http://static1.squarespace.com/static/52e96946e4b09806b1d651c6/52e97557e4b0cd469d34ce01/52fbe339e4b04f3c7b4c1617/1392239417728/hallway01.mp3</link>
+      <title>attachment-52fbe339e4b04f3c7b4c1617</title>
+      <wp:post_name>hallway01-mp3</wp:post_name>
+      <wp:post_type>attachment</wp:post_type>
+      <wp:post_id>5</wp:post_id>
+      <wp:post_parent>4</wp:post_parent>
+      <wp:status>inherit</wp:status>
+      <content:encoded><![CDATA[img-52fbe339e4b04f3c7b4c1617]]></content:encoded>
+      <excerpt:encoded><![CDATA[exc-52fbe339e4b04f3c7b4c1617]]></excerpt:encoded>
+      <pubDate>Wed, 12 Feb 2014 21:10:17 +0000</pubDate>
+      <wp:post_date>2014-02-12 21:10:17</wp:post_date>
+      <wp:post_date_gmt>2014-02-12 21:10:17</wp:post_date_gmt>
+      <dc:creator>chris@chrisvannoy.com</dc:creator>
+    </item>
+  </channel>
+</rss>
+

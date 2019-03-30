@@ -13,6 +13,12 @@ I ocassionally speak at things like Ruby user groups and panels. Where there's v
 The following talks or panel discussions were presented at
 [Indy.rb](http://indyrb.org).
 
+#### June 2018 - Fishbowl Panel on Mentoring Engineers
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/TSwL8n9xL28" frameborder="0" allowfullscreen></iframe>
+
+An impromptu panel on mentoring junior developers at Indy.rb.
+
 #### June 2017 - Scripting the Mac with Ruby
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/owXhe4mKqwc" frameborder="0" allowfullscreen></iframe>

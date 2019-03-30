@@ -30,8 +30,8 @@ In that decade-plus, Chris has seen the technical recruiting business from all s
 
 ### Current things ...
 
-I'm a Senior Software Engineer at [Sigstr](https://sigstr.com), a B2B
+I'm the Director of Engineering - managing a growing team of four - at [Sigstr](https://sigstr.com), a B2B
 SaaS startup in Indianapolis, IN.
 
-I'm married with two kids - ages 8.5 and 6. Both are on the autism
+I'm married with two kids - ages 10 and 7.5. Both are on the autism
 spectrum (and _amazing_).

@@ -53,9 +53,10 @@ defaults:
           last_name: "Vannoy"
 
 
-gems:
+plugins:
     - jekyll-feed
     - jekyll-sitemap
+    - jekyll-paginate
 
 tag_page_layout: tag
 tag_page_dir: tag

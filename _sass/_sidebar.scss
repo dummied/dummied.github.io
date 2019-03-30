@@ -11,6 +11,7 @@
     white-space: nowrap;
     width: 54px;
     z-index: 1;
+    overflow: hidden;
 
     @include media-query($on-laptop) {
         position: absolute;
